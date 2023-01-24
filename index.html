@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color : #F2DEBA ">
+    <center>
+        <div>
+
+            <form action="" name="stud" id="stud">
+                <h2 >
+                    Purchase Order
+                </h2>
+                
+                <div style="color:red ;">
+                    <h3><span class="error"></span></h3>
+                </div>
+                <label for="Supplier Name">Supplier Name</label><br>
+                <input name="Supplier Name" type="text" id="SupplierName" placeholder="Enter Supplier Name" required>
+                <br><br>
+                <label for="">PO Value</label><br>
+                <input id="PO_Value" type="text" placeholder="Entere PO Value" required>
+                <br><br>
+                <label for="">Re-Enter PO Value</label><br>
+                <input id="ReEnter" type="text" oninput="difference()" placeholder="Again Enter the same po value as above" required>
+                <br><br>
+                <label for="">Paid Amt</label><br>
+                <input id="Paid" type="text" oninput="difference()" placeholder="How Amount do you want to pay" required>
+                <br><br>
+                <label for="">Balance Amount</label><br>
+                <input type="text" id="balanceAmount" placeholder=""  disabled>
+                <br><br>
+                <label for="">Status</label><br>
+                <input type="text" id="status"  value="" disabled>
+                <br><br>
+                <!-- validation button -->
+                <button type="submit" id="val"  class="button-68 validate">Validate</button>
+                <!--Submit button  -->
+                <button id="sub" class="button-68">Submit</button>
+            </form>
+        </div>
+        <br>
+   
+        <div style="width:50% ;">
+            <table  class="table" style="width:50% ;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Po number</th>
+                        <th>Paid Amount</th>
+                        <th>Balance Amount</th>
+                        <th>Success</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">    
+                </tbody>
+            </table>
+        </div>
+   
+    </center>
+
+    <script src="index.js"></script>
+    <script>
+        //function difference(){
+          //  document.querySelector('balanceAmount').value = POval.value - Paid.value
+       // }
+    </script>
+</body>
+
+</html>
